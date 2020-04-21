@@ -10,7 +10,7 @@ export type FeatureUrlFunction = (p0: Extent, p1: number, p2: Projection) => str
 export function loadFeaturesXhr(
     url: string | FeatureUrlFunction,
     format: FeatureFormat,
-    success: () => void,
+    success: (features: Collection<Geometry>, p1: Projection) => void,
     failure: (this: VectorSource<Geometry>) => void,
 ): FeatureLoader;
 export function setWithCredentials(xhrWithCredentials: boolean): void;
